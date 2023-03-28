@@ -7,6 +7,7 @@ export default class AccountSearchForm extends LightningElement {
     }
 
     searchHandler(){
-        console.log(this.searchText);
+        const event = new CustomEvent('searchaccountcontact',{detail: this.searchText});
+        this.dispatchEvent(event);
     }
 }
